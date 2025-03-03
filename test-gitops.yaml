@@ -6,6 +6,7 @@ metadata:
   labels:
     app: test-gitops
   name: test-gitops
+  namespace: test-gitops-ns
 spec:
   replicas: 1
   selector:
@@ -31,7 +32,7 @@ metadata:
   labels:
     app: test-gitops
   name: test-gitops-svc
-  #namespace: test-gitops-ns
+  namespace: test-gitops-ns
 spec:
   ports:
   - port: 80
