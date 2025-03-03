@@ -4,20 +4,20 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: test-gitops
-  name: test-gitops
+    app: testgitops
+  name: testgitops
   namespace: test-gitops-ns
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: test-gitops
+      app: testgitops
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: test-gitops
+        app: testgitops
     spec:
       containers:
       - image: nginx
@@ -30,8 +30,8 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: test-gitops
-  name: test-gitops-svc
+    app: testgitops
+  name: testgitopssvc
   namespace: test-gitops-ns
 spec:
   ports:
@@ -39,7 +39,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: test-gitops
+    app: testgitops
   type: LoadBalancer
 status:
   loadBalancer: {}
